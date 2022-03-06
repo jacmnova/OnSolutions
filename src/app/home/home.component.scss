@@ -1,0 +1,47 @@
+logo-trans {
+  transform: translate(0px, -45%);
+  z-index: 100000;
+  width: 200px !important;
+  display: flex;
+  position: absolute;
+}
+
+.logo {
+  width: 60%;
+}
+
+
+
+.rombo {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  background: #428bca;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.rombo-center {
+  margin-right: 18%;
+}
+
+.rombo-first {
+  margin-top: 10%;
+  margin-bottom: -20px;
+}
+
+.rombo-last {
+  margin-top: -20px;
+}
+
+#section-1 {
+  height: 90vh !important;
+}
+
+#section-2 {
+  margin-top: 10vh !important;
+  height: 90vh !important;
+}
