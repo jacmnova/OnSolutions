@@ -1,0 +1,86 @@
+<!-- Just an image -->
+<nav class="navbar navbar-light bg-light">
+  <div class="container d-flex justify-content-between ">
+    <a class="navbar-brand" href="#">
+      <img
+        src="../../assets/img/LOGO%20On%20Solution.png"
+        height="60"
+        alt=""
+        loading="lazy"
+      />
+    </a>
+    <a href="/">
+      <i class="fas fa-sign-out-alt"></i>
+    </a>
+  </div>
+</nav>
+<div class="container-fluid">
+  <div class="container">
+    <div class="row mt-5">
+      <div class="col-12 d-flex justify-content-center">
+        <h3>Bienvenido de nuevo</h3>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header">
+            Solicitudes de afiliacion
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-12">
+                <table class="table table-hover">
+                  <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Apellido</th>
+                    <th scope="col">Cedula</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Telefono</th>
+                    <th scope="col">Tipo de afiliacion</th>
+                    <th scope="col">Fecha</th>
+                    <th scope="col"></th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr *ngFor="let item of solicitudes">
+                    <th scope="row">{{ item.id }}</th>
+                    <td>{{ item.nombre }}</td>
+                    <td>{{ item.apellido }}</td>
+                    <td>{{ item.cedula }}</td>
+                    <td>{{ item.email }}</td>
+                    <td>{{ item.telefono }}</td>
+
+                    <td>{{ item.tipo_afiliacion }}</td>
+                    <td>{{ item.fecha | date }}</td>
+
+                    <td *ngIf="item.estado_afiliacion === 'NUEVA'">
+                      <button (click)="aprobar(item.id)">
+                        <i class="fas fa-check"></i>
+                      </button>
+                      <button (click)="denegar(item.id)">
+                        <i class="fas fa-times"></i>
+                      </button>
+                    </td>
+                    <td *ngIf="item.estado_afiliacion === 'DENEGADA'">
+                      DENEGADA
+                    </td>
+                    <td *ngIf="item.estado_afiliacion === 'APROBADA'">
+                      APROBADA
+                    </td>
+
+
+                  </tr>
+
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

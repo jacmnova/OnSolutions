@@ -1,0 +1,45 @@
+<div class="modal-header">
+  <button
+    type="button"
+    class="btn-close"
+    aria-label="Close"
+    (click)="modalRef.close()"
+  ></button>
+</div>
+<div class="modal-body">
+  <div class="container">
+<!--    <div class="row">-->
+<!--      <img src="./assets/img/LOGO%20On%20Solution.png" class="mx-auto logo" alt="Logo">-->
+<!--    </div>-->
+
+    <div class="row">
+      <div class="col-12 d-flex justify-content-center">
+        <h3>Login</h3>
+      </div>
+    </div>
+    <form [formGroup]="loginForm"  class="row w-100">
+      <div class="row mt-4">
+        <div class="col-12">
+          <mdb-form-control>
+            <input mdbInput type="email" id="form1" class="form-control" formControlName="user"/>
+            <label mdbLabel class="form-label" for="form1">Correo electrónico</label>
+          </mdb-form-control>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-12">
+          <mdb-form-control>
+            <input mdbInput type="password" id="form1" class="form-control" formControlName="clave"/>
+            <label mdbLabel class="form-label" for="form1">Clave</label>
+          </mdb-form-control>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="modal-footer d-flex justify-content-center">
+<!--  <button type="button" class="btn btn-secondary" (click)="modalRef.close()">-->
+<!--    Login-->
+<!--  </button>-->
+  <button type="button" class="btn btn-primary" (click)="login()">Login</button>
+</div>
